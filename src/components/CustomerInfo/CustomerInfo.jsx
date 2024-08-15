@@ -8,8 +8,8 @@ function CustomerInfo() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    const [customerName, setCustomerName] = useState ('');
-    const [customerStreetAddress, setCustomerStreetAddress] = useState ('');
+    const [customerName, setCustomerName] = useState('');
+    const [customerStreetAddress, setCustomerStreetAddress] = useState('');
     const [customerCity, setCustomerCity] = useState('');
     const [customerZip, setCustomerZip] = useState('');
 
@@ -19,7 +19,7 @@ function CustomerInfo() {
         e.preventDefault();
 
         addCustomer();
-        if(confirm) {
+        if (confirm) {
             clearFields()
             // history.push('/checkout');
         }
@@ -35,10 +35,10 @@ function CustomerInfo() {
     const getRadioValue = () => {
         let ele = document.getElementsByName('method');
         console.log(ele)
-        for (let i = 0;i < ele.length; i++){
+        for (let i = 0; i < ele.length; i++) {
             if (ele[i].checked)
                 console.log(ele[i])
-                return ele[i].value
+            return ele[i].value
         }
     }
 
@@ -47,45 +47,47 @@ function CustomerInfo() {
         dispatch({
             type: "ADD_CUSTOMER",
             payload: {
-                customer_name: customerName, 
+                customer_name: customerName,
                 street_address: customerStreetAddress,
                 city: customerCity,
                 zip: Number(customerZip),
                 type: method
             }
-    })
-}
-       
-    
+        })
+    }
+
+
     return (
-        <div className='customerInfo'>
+        <div >
             <h2>Step 2: Customer Information</h2>
-            <form onSubmit={handleSubmit}>
-                <span  className='addressInput'>
-                <input onChange={(e)=> setCustomerName(e.target.value)}
-                    type="text"
-                    placeholder="Name"
-                    value={customerName} />
-                <input onChange={(e)=> setCustomerStreetAddress(e.target.value)}
-                    type="text"
-                    placeholder="Street Address"
-                    value={customerStreetAddress} />
-                <input onChange={(e)=> setCustomerCity(e.target.value)}
-                    type="text"
-                    placeholder="City"
-                    value={customerCity} />
-                <input onChange={(e)=> setCustomerZip(e.target.value)}
-                    type="text"
-                    placeholder="Zip code"
-                    value={customerZip} />
-                </span>
-                <span className='method'>
-                 <input type="radio" id="method1" name="method" value="Pickup" />
-                    <label for="method1">Pickup</label><br></br>
-                 <input type="radio" id="method2" name="method" value="Delivery" />
-                    <label for="method2">Delivery</label><br></br>
-                </span>
-                <button type="submit" className='next' >Next</button> 
+            <form onSubmit={handleSubmit} className='customerInfo'>
+                <div className='addressInput'>
+                    <div className="addressInput">
+                        <input onChange={(e) => setCustomerName(e.target.value)}
+                            type="text"
+                            placeholder="Name"
+                            value={customerName} />
+                        <input onChange={(e) => setCustomerStreetAddress(e.target.value)}
+                            type="text"
+                            placeholder="Street Address"
+                            value={customerStreetAddress} />
+                        <input onChange={(e) => setCustomerCity(e.target.value)}
+                            type="text"
+                            placeholder="City"
+                            value={customerCity} />
+                        <input onChange={(e) => setCustomerZip(e.target.value)}
+                            type="text"
+                            placeholder="Zip code"
+                            value={customerZip} />
+                    </div>
+                    <div className='method'>
+                        <input type="radio" id="method1" name="method" value="Pickup" />
+                        <label for="method1">Pickup</label><br></br>
+                        <input type="radio" id="method2" name="method" value="Delivery" />
+                        <label for="method2">Delivery</label><br></br>
+                    </div>
+                </div>
+                <button type="submit" className='next' >Next</button>
             </form>
         </div>
 
