@@ -3,6 +3,9 @@
 }
 
 .App-header {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
   background-color: #222;
   height: 70px;
   padding: 20px;
@@ -14,6 +17,24 @@
   font-size: 2em;
 }
 
+#pizza-item {
+  width: 200px;
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 20px;
+
+}
+
+#pizza-img {
+  width:100%;
+}
+
+#pizza-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .customerInfo {
   display: flexbox;
   flex-direction: column;
@@ -22,6 +43,7 @@
  .addressInput {
   justify-content: space-between;
  }
- input {
+ 
+ /* input {
   
- }
+ } */
