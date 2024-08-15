@@ -17,16 +17,16 @@ function App() {
       <Router>
         <Nav />
           <Route exact path="/">
-              <Home />
+              {/* <Home /> */}
           </Route>
           <Route exact path="/orderPizza">
-              <OrderPizza />
+              {/* <OrderPizza /> */}
           </Route>
           <Route exact path="/customerInfo">
-              <CustomerInfo />
+              {/* <CustomerInfo /> */}
           </Route>
           <Route exact path="/checkout">
-              <Checkout />
+              {/* <Checkout /> */}
           </Route>
       </Router>
 

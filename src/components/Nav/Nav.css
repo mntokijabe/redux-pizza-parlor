@@ -1,16 +1,22 @@
-.navbar-nav {
+/* .navbar-nav {
     margin-left: auto;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    /* font-family: 'Courier New', Courier, monospace; */
+    background-color: #00ced1;
+
 }
+ */
+
+
 
 /* .nav-item {
     align-items: center;
 } */
 
-/* .navbar-nav {
+/* .navbar {
     font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    justify-content: space-between;
 
 } */
