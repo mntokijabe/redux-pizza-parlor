@@ -22,6 +22,13 @@ const cartTotal = (state=0, action) => {
     let cartTotal = Math.round((state + Number(action.payload))*100)/100;
     return cartTotal;
   }
+}
+
+const addCustomer = (state = [], action) => {
+if(action.type === 'ADD_CUSTOMER') {
+  let currentCustomer = [action.payload];
+  return currentCustomer
+}
   return state;
 }
 
@@ -29,7 +36,8 @@ const store = createStore(
   combineReducers({
     pizzaList,
     cart,
-    cartTotal
+    cartTotal,
+    addCustomer, 
   }),
   applyMiddleware(logger),
 );

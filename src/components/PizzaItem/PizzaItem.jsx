@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 function PizzaItem({getPizzas, pizza}) {
     const dispatch = useDispatch();

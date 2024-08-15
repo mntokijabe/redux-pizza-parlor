@@ -34,3 +34,16 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.customerInfo {
+  display: flexbox;
+  flex-direction: column;
+  margin: 15px;
+}
+ .addressInput {
+  justify-content: space-between;
+ }
+ 
+ /* input {
+  
+ } */
