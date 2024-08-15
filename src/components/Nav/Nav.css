@@ -1,0 +1,16 @@
+.navbar-nav {
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+/* .nav-item {
+    align-items: center;
+} */
+
+/* .navbar-nav {
+    font-family: 'Courier New', Courier, monospace;
+
+} */
