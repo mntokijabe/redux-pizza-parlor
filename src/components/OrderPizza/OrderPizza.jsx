@@ -28,6 +28,10 @@ function OrderPizza() {
             })
     }
 
+    const nextStep = () => {
+        history.push('/customerInfo');
+    }
+
     const pizzaList = useSelector(store => store.pizzaList)
     return (
         <div id="pizza-list">
@@ -39,6 +43,7 @@ function OrderPizza() {
                     pizza={pizza} />
                 )
             })}
+            <button onClick={nextStep}>Next</button>
         </div>
     )
 }
