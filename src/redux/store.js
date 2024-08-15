@@ -22,6 +22,7 @@ const cartTotal = (state=0, action) => {
     let cartTotal = Math.round((state + Number(action.payload))*100)/100;
     return cartTotal;
   }
+  return state;
 }
 
 const addCustomer = (state = [], action) => {
