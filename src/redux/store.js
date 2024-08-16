@@ -14,6 +14,10 @@ const cart = (state=[], action) => {
       let newCart = [...state, action.payload]
       return newCart;
   }
+  else if (action.type === 'EMPTY_CART'){
+    let cartTotal= action.payload;
+    return cartTotal;  
+  }
   return state;
 }
 
@@ -22,13 +26,21 @@ const cartTotal = (state=0, action) => {
     let cartTotal = Math.round((state + Number(action.payload))*100)/100;
     return cartTotal;
   }
+  else if (action.type === 'CLEAR_CART_TOTAL'){
+    let cartTotal= action.payload;
+    return cartTotal;  
+  }
   return state;
 }
 
-const addCustomer = (state = [], action) => {
+const customerInfo = (state = [], action) => {
 if(action.type === 'ADD_CUSTOMER') {
   let currentCustomer = [action.payload];
   return currentCustomer
+}
+else if (action.type === 'CLEAR_CUSTOMER'){
+  let cartTotal= action.payload;
+  return cartTotal;  
 }
   return state;
 }
@@ -38,7 +50,7 @@ const store = createStore(
     pizzaList,
     cart,
     cartTotal,
-    addCustomer, 
+    customerInfo, 
   }),
   applyMiddleware(logger),
 );
