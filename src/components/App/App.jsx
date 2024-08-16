@@ -31,12 +31,12 @@ const cartRender = cartDisplay();
           {cartRender}
         </div>
       </header>
-      <img src='images/pizza_photo.png' />
-      <p>Pizza is great.</p>
+      
       <Router>
         <Nav />
           <Route exact path="/">
-              {/* <Home /> */}
+          <img id="pizza-pic" src='images/pizza_photo.png' />
+          <p>Pizza is great.</p>
           </Route>
           <Route exact path="/orderPizza">
               <OrderPizza />
