@@ -7,20 +7,20 @@ function PizzaItem({getPizzas, pizza}) {
         return <button>Add Pizza to Cart</button>;
     }
 
+
     const addToCart = () =>{
         let cartTotaltoAdd = pizza.price;
-        let pizzaToAdd = {id: pizza.id, quantity: 1}
-
+        let pizzaToAdd = {id: pizza.id, name: pizza.name, price: pizza.price, quantity: 1}
         dispatch({
             type: 'ADD_CART_TOTAL',
             payload: cartTotaltoAdd
         })
-
         dispatch({
             type: 'ADD_TO_CART',
             payload: pizzaToAdd
         })
     }
+
 
     return (
         <div id="pizza-item">

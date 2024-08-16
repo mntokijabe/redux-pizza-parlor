@@ -20,17 +20,11 @@ function CustomerInfo() {
 
         addCustomer();
         if (confirm) {
-            clearFields()
-            // history.push('/checkout');
+            // clearFields()
+            history.push('/checkout');
         }
     }
 
-    const clearFields = () => {
-        setCustomerName('');
-        setCustomerStreetAddress('');
-        setCustomerCity('');
-        setCustomerZip('');
-    }
 
     const getRadioValue = () => {
         let ele = document.getElementsByName('method');
