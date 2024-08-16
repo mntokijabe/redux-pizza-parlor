@@ -8,6 +8,7 @@ let cart = useSelector(store => store.cart)
 let buttonAction = true;
 let decidedButton;
 
+
     const addToCart = () =>{
         let cartTotaltoAdd = pizza.price;
         let pizzaToAdd = {id: pizza.id, name: pizza.name, price: pizza.price, quantity: 1}
@@ -16,7 +17,6 @@ let decidedButton;
             type: 'ADD_CART_TOTAL',
             payload: cartTotaltoAdd
         })
-
         dispatch({
             type: 'ADD_TO_CART',
             payload: pizzaToAdd
@@ -39,6 +39,7 @@ let decidedButton;
         })
         setButtonDecision(true);
     }
+
 
     return (
         <div id="pizza-item">

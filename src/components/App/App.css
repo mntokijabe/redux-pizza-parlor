@@ -36,17 +36,20 @@
 }
 
 .customerInfo {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   margin: 15px;
 }
  .addressInput {
+  display:flex;
+  flex-direction: column;
   justify-content: space-between;
  }
  
- /* input {
-  
- } */
+input {
+  margin-top: 20px;
+  width: 350px;
+ }
 
  #nav-bar {
     display: flex;

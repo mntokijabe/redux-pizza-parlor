@@ -3,6 +3,7 @@ import axios from "axios";
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min.js";
 function OrderPizza() {
     const dispatch = useDispatch();
     const history = useHistory();

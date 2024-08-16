@@ -7,7 +7,7 @@ import './App.css';
 import OrderPizza from '../OrderPizza/OrderPizza.jsx';
 import CustomerInfo from '../CustomerInfo/CustomerInfo.jsx';
 import Nav from '../Nav/Nav.jsx';
-// import Checkout from '...Checkout/Checkout.jsx';
+import Checkout from '../Checkout/Checkout.jsx';
 
 function App() {
 const cartTotal = useSelector(store => store.cartTotal)
@@ -39,13 +39,16 @@ const cartRender = cartDisplay();
           <p>Pizza is great.</p>
           </Route>
           <Route exact path="/orderPizza">
-          <OrderPizza />
+              <OrderPizza />
           </Route>
           <Route exact path="/customerInfo">
-          <CustomerInfo />
+              <CustomerInfo />
           </Route>
           <Route exact path="/checkout">
-              {/* <Checkout /> */}
+              <Checkout />
+          </Route>
+          <Route exact path="/admin">
+              <Admin />
           </Route>
       </Router>
     </div>
