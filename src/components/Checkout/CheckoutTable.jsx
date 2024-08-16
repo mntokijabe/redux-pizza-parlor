@@ -15,7 +15,7 @@ function CheckoutTable() {
             <tbody>
                 {cart.map((pizza) => {
                     return (
-                        <tr>
+                        <tr key={pizza.id}>
                         <td>{pizza.name}</td>
                         <td>{pizza.price}</td>
                         </tr>

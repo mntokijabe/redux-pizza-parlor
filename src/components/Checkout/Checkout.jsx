@@ -35,7 +35,7 @@ function Checkout(){
         .then((response) => {
             alert('Your order has been placed! Happy Eating!');
             clearData();
-            history.push('/home') 
+            history.push('/') 
         })
         .catch((error) => {
             console.log('there was a POST /api/order error',error);

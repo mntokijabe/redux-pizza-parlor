@@ -6,6 +6,7 @@ import '../App/App.css'
 function Admin() {
     let [adminList, setAdminList] = useState([]);
 
+    useEffect(() => {
     axios ({
         method: `GET`,
         url: '/api/order'
@@ -14,6 +15,8 @@ function Admin() {
     }) .catch((error) => {
         console.log(error);
     });
+}, [])
+    
 
     
     return (
@@ -30,7 +33,7 @@ function Admin() {
                 </thead>
                 <tbody>{adminList.map(orders => {
                 return (
-                    <tr>
+                    <tr key={orders.id}>
                         <td>{orders.customer_name}</td>
                         <td>{orders.time}</td>
                         <td>{orders.type}</td>
