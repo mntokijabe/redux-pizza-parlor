@@ -1,9 +1,11 @@
 import PizzaItem from "../PizzaItem/PizzaItem.jsx";
 import axios from "axios";
+import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 function OrderPizza() {
     const dispatch = useDispatch();
+    const history = useHistory();
 
     useEffect(() => {
         getPizzas();
@@ -34,6 +36,7 @@ function OrderPizza() {
 
     const pizzaList = useSelector(store => store.pizzaList)
     return (
+        <>
         <div id="pizza-list">
             {pizzaList.map((pizza) => {
                 return (
@@ -43,8 +46,12 @@ function OrderPizza() {
                     pizza={pizza} />
                 )
             })}
-            <button onClick={nextStep}>Next</button>
+            
         </div>
+        <div id="pizza-btn">
+        <button id="next-btn" onClick={nextStep}>Next</button>
+        </div>
+        </>
     )
 }
 export default OrderPizza;

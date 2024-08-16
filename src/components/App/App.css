@@ -47,3 +47,43 @@
  /* input {
   
  } */
+
+ #nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%
+ }
+
+ #nav-shell {
+  display: flex;
+  gap: 30px;
+ }
+
+ .nav-btn {
+  background-color: lightblue;
+  padding: 10px;
+  color:#222;
+ }
+
+ .nav-btn:active {
+  background-color: #222;
+  color: white;
+ }
+
+ #pizza-pic {
+  margin-top: 30px;
+ }
+
+ #pizza-btn {
+  display:flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+  margin-bottom: 100px;
+ }
+
+ #next-btn {
+  width: 150px;
+  height: 50px;
+ }
