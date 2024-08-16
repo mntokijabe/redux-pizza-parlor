@@ -12,7 +12,7 @@ let decidedButton;
     const addToCart = () =>{
         let cartTotaltoAdd = pizza.price;
         let pizzaToAdd = {id: pizza.id, name: pizza.name, price: pizza.price, quantity: 1}
-        
+
         dispatch({
             type: 'ADD_CART_TOTAL',
             payload: cartTotaltoAdd
@@ -45,7 +45,7 @@ let decidedButton;
         <div id="pizza-item">
            <img id="pizza-img" src={pizza.image_path} />
            <h3>{pizza.name}</h3>
-           <p>{pizza.description}</p>
+           <p className="pizza-desc">{pizza.description}</p>
            <p>{pizza.price}</p>
            {buttonDecision ? <button onClick={addToCart}>Add to Cart</button> : <button onClick={removeFromCart}>Remove From Cart</button>}
         </div>
