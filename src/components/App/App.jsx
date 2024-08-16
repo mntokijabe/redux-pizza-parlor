@@ -39,13 +39,16 @@ const cartRender = cartDisplay();
               {/* <Home /> */}
           </Route>
           <Route exact path="/orderPizza">
-          <OrderPizza />
+              <OrderPizza />
           </Route>
           <Route exact path="/customerInfo">
-          <CustomerInfo />
+              <CustomerInfo />
           </Route>
           <Route exact path="/checkout">
               <Checkout />
+          </Route>
+          <Route exact path="/admin">
+              <Admin />
           </Route>
       </Router>
     </div>
