@@ -8,6 +8,7 @@ import OrderPizza from '../OrderPizza/OrderPizza.jsx';
 import CustomerInfo from '../CustomerInfo/CustomerInfo.jsx';
 import Nav from '../Nav/Nav.jsx';
 import Checkout from '../Checkout/Checkout.jsx';
+import Admin from '../Admin/Admin.jsx';
 
 function App() {
 const cartTotal = useSelector(store => store.cartTotal)

@@ -76,9 +76,9 @@ function CustomerInfo() {
                     </div>
                     <div className='method'>
                         <input type="radio" id="method1" name="method" value="Pickup" />
-                        <label for="method1">Pickup</label><br></br>
+                        <label htmlFor="method1">Pickup</label><br></br>
                         <input type="radio" id="method2" name="method" value="Delivery" />
-                        <label for="method2">Delivery</label><br></br>
+                        <label htmlFor="method2">Delivery</label><br></br>
                     </div>
                 </div>
                 <button type="submit" className='next' >Next</button>
